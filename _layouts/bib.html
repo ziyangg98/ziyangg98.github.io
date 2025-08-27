@@ -1,0 +1,8 @@
+<div style="margin-bottom: 1.2em;">
+{{ entry.author | replace: ' and ', ', ' | replace: 'Gong, Ziyang', '<strong>Ziyang Gong</strong>' | replace: 'Ziyang Gong', '<strong>Ziyang Gong</strong>' }}. {{ entry.title }}. <em>{% if entry.journal %}{{ entry.journal }}{% elsif entry.booktitle %}{{ entry.booktitle }}{% else %}{{ entry.publisher }}{% endif %}</em>{% if entry.volume %}, {{ entry.volume }}{% endif %}{% if entry.number %}({{ entry.number }}){% endif %}{% if entry.pages %}:{{ entry.pages }}{% endif %}, {{ entry.year }}.
+{% if entry.pdf or entry.doi or entry.github %}
+{% if entry.pdf %}[<a href="{{ entry.pdf }}">PDF</a>] {% endif %}
+{% if entry.doi %}[<a href="https://doi.org/{{ entry.doi }}">DOI</a>] {% endif %}
+{% if entry.github %}[<a href="{{ entry.github }}">Code</a>]{% endif %}
+{% endif %}
+</div>
