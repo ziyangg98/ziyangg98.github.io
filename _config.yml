@@ -1,0 +1,49 @@
+title: Ziyang Gong
+email: meetziyang@gmail.com
+description: Ph.D. Student in Statistics | Survival Analysis | Federated Learning | SWUFE
+baseurl: ""
+url: "http://gongziyang.com"
+github_username: ziyangg98
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: Publications
+    url: /publications/
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-scholar
+
+# Scholar settings
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography/
+  bibliography: references.bib
+  bibliography_template: bib
+  sort_by: year
+  order: descending
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-version
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .github/
+  - .git/
+  - .editorconfig
+  - .gitignore
+  - .pre-commit-config.yaml
+  - .markdownlint.json
+  - README.md
+  - LICENSE
