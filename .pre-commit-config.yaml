@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^(_site/|vendor/)
+      - id: end-of-file-fixer
+        exclude: ^(_site/|vendor/)
+      - id: check-yaml
+        exclude: ^(_site/|vendor/)
+      - id: check-added-large-files
+      - id: mixed-line-ending
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.38.0
+    hooks:
+      - id: markdownlint
+        exclude: ^(_site/|vendor/)
