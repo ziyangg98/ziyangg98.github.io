@@ -15,8 +15,12 @@ gem "minima", "~> 2.5"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
   gem "jekyll-scholar", "~> 7.0"
 end
+
+gem "webrick", "~> 1.8"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
