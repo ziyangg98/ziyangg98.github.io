@@ -1,14 +1,16 @@
 title: Ziyang Gong
+author: Ziyang Gong
 email: meetziyang@gmail.com
-description: Ph.D. Student in Statistics | Survival Analysis | SWUFE
+description: Ph.D. Student in Statistics | SWUFE
 baseurl: ""
-url: "http://gongziyang.com"
+url: "https://gongziyang.com"
 github_username: ziyangg98
 
-# Google Analytics
 google_analytics: G-BGM4D1P40Q
 
-# Navigation
+mathjax:
+  enabled: true
+
 navigation:
   - title: Home
     url: /
@@ -17,14 +19,12 @@ navigation:
   - title: Publications
     url: /publications/
 
-# Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-scholar
 
-# Scholar settings
 scholar:
   style: apa
   locale: en
@@ -34,7 +34,6 @@ scholar:
   sort_by: year
   order: descending
 
-# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock

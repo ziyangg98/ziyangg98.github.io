@@ -1,8 +1,7 @@
 ---
 layout: page
+title: About Me
 ---
-
-## Ziyang Gong
 
 I am a Ph.D. student in Statistics at Southwestern University of Finance and Economics, where I am advised by Professor Ling Zhou. My research primarily focuses on survival analysis, with particular emphasis on developing federated learning and transfer learning methods for time-to-event data in distributed and privacy-preserving settings.
 
