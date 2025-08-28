@@ -1,12 +1,23 @@
 <header class="site-header">
+
   <div class="wrapper">
-    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <div class="trigger">
-        {% for item in site.navigation %}
-          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% endfor %}
-      </div>
-    </nav>
+    {%- assign nav_paths = site.navigation | map: "url" -%}
+    {%- assign nav_titles = site.navigation | map: "title" -%}
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+
+    {%- if site.navigation %}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+          {%- for item in site.navigation -%}
+          <a class="nav-item" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
   </div>
 </header>
