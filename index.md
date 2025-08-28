@@ -28,5 +28,5 @@ Southwestern University of Finance and Economics<br>
 
 ## Contact
 
-**Email:** meetziyang [at] gmail [dot] com
+**Email:** meetziyang [at] gmail [dot] com<br>
 **Address:** Room 221, Chengzheng Building, 555 Liutai Avenue, Chengdu 611130, China
