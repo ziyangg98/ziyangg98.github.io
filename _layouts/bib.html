@@ -1,8 +1,33 @@
-<div style="margin-bottom: 1.2em;">
-{{ entry.author | replace: ' and ', ', ' | replace: 'Gong, Ziyang', '<strong>Ziyang Gong</strong>' | replace: 'Ziyang Gong', '<strong>Ziyang Gong</strong>' }}. {{ entry.title }}. <em>{% if entry.journal %}{{ entry.journal }}{% elsif entry.booktitle %}{{ entry.booktitle }}{% else %}{{ entry.publisher }}{% endif %}</em>{% if entry.volume %}, {{ entry.volume }}{% endif %}{% if entry.number %}({{ entry.number }}){% endif %}{% if entry.pages %}:{{ entry.pages }}{% endif %}, {{ entry.year }}.
-{% if entry.pdf or entry.doi or entry.github %}
-{% if entry.pdf %}[<a href="{{ entry.pdf }}">PDF</a>] {% endif %}
-{% if entry.doi %}[<a href="https://doi.org/{{ entry.doi }}">DOI</a>] {% endif %}
-{% if entry.github %}[<a href="{{ entry.github }}">Code</a>]{% endif %}
-{% endif %}
+<div class="publication-entry" style="margin-bottom: 1.2em;">
+  {%- capture authors -%}
+    {{ entry.author | replace: ' and ', ', ' | replace: 'Gong, Ziyang', '<strong>Ziyang Gong</strong>' | replace: 'Ziyang Gong', '<strong>Ziyang Gong</strong>' }}
+  {%- endcapture -%}
+
+  {%- capture venue -%}
+    {%- if entry.journal -%}
+      {{ entry.journal }}
+    {%- elsif entry.booktitle -%}
+      {{ entry.booktitle }}
+    {%- elsif entry.publisher -%}
+      {{ entry.publisher }}
+    {%- endif -%}
+  {%- endcapture -%}
+
+  <div class="publication-text">
+    {{ authors | strip }}.
+    {{ entry.title }}.
+    <em>{{ venue | strip }}</em>
+    {%- if entry.volume -%}, {{ entry.volume }}{%- endif -%}
+    {%- if entry.number -%}({{ entry.number }}){%- endif -%}
+    {%- if entry.pages -%}:{{ entry.pages }}{%- endif -%},
+    {{ entry.year }}.
+  </div>
+
+  {%- if entry.pdf or entry.doi or entry.github -%}
+  <div class="publication-links">
+    {%- if entry.pdf -%}[<a href="{{ entry.pdf }}" target="_blank">PDF</a>]{%- endif -%}
+    {%- if entry.doi -%} [<a href="https://doi.org/{{ entry.doi }}" target="_blank">DOI</a>]{%- endif -%}
+    {%- if entry.github -%} [<a href="{{ entry.github }}" target="_blank">Code</a>]{%- endif -%}
+  </div>
+  {%- endif -%}
 </div>
