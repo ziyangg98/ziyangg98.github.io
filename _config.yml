@@ -5,6 +5,9 @@ baseurl: ""
 url: "http://gongziyang.com"
 github_username: ziyangg98
 
+# Google Analytics
+google_analytics: G-BGM4D1P40Q
+
 # Navigation
 navigation:
   - title: Home
